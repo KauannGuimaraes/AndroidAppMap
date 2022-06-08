@@ -9,11 +9,11 @@
         $id = $_GET['search'];
         $result = $pinpointDAO->searchUser($id);
         if($result == TRUE){
-            $result = array('id'=> $id, 'status' => 'sucess');
+            $result = array("users", 'id'=> $id, 'status' => 'sucess');
         } 
     } else {
         $result = array('status' => 'failed');
     }
     http_response_code(200);
-    echo json_encode("{employees:[$result]}")
+    echo json_encode(array("users"=>$result))
 ?>
