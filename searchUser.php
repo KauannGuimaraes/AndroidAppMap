@@ -9,7 +9,7 @@
         $id = $_GET['search'];
         $result = $pinpointDAO->searchUser($id);
         if($result == TRUE){
-            $result = array("users", 'id'=> $id, 'status' => 'sucess');
+            $result = array('id'=> $id, 'status' => 'sucess');
         } 
     } else {
         $result = array('status' => 'failed');

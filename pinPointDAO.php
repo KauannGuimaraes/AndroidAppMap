@@ -43,7 +43,7 @@
                 $sql = "select * from pinpoint";
                 $stmt = $pdo->prepare($sql);
                 $stmt-> execute();
-                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $result = $stmt->fetchAll();
                 return $result;
             } catch (PDOException $erro){
                 echo $erro;
